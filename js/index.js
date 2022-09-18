@@ -313,6 +313,12 @@ fetch('https://api.github.com/users/MarcusCHill/repos')
   .then(data => repositoryData(data))
   .catch(error => console.log("Looks like something went wrong with a request!", error))
 
+fetch('https://api.github.com/users/MarcusCHill/starred')
+  .then(res => checkStatus(res))
+  .then(response => response.json())
+  .then(data => repositoryData(data))
+  .catch(error => console.log("Looks like something went wrong with a request!", error))
+
 
 
 /*
