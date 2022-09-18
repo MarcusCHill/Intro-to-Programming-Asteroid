@@ -17,7 +17,7 @@ Located where I want my list of skills to be by using desendant selector (#skill
 Using a for of loop I add each element of my skills array within a newly created list element
 Added each list element with array value into the skills list
 */
-let skills = ["HTML", "CSS", "JavaScript", "React.js", "Git", "Fetch API", ];
+let skills = ["React.js", "JavaScript", "Java", "HTML", "CSS", "Git", "Fetch API", "Figma", "GitHub", "Trello", "Scrum Methods",];
 let skillsList = document.querySelector("#skills ul");
 for (let skill of skills) {
   let newSkill = document.createElement("li");
@@ -310,7 +310,10 @@ const repositoryData = (data) => {
 fetch('https://api.github.com/users/MarcusCHill/repos')
   .then(res => checkStatus(res))
   .then(response => response.json())
-  .then(data => repositoryData(data))
+  .then(data =>
+    return (
+      console.log(data) repositoryData(data)
+    ))
   .catch(error => console.log("Looks like something went wrong with a request!", error))
 
 
