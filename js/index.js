@@ -310,10 +310,7 @@ const repositoryData = (data) => {
 fetch('https://api.github.com/users/MarcusCHill/repos')
   .then(res => checkStatus(res))
   .then(response => response.json())
-  .then(data =>
-    return (
-      console.log(data) repositoryData(data)
-    ))
+  .then(data => repositoryData(data))
   .catch(error => console.log("Looks like something went wrong with a request!", error))
 
 
